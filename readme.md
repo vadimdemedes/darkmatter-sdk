@@ -1,4 +1,4 @@
-# Darkmatter SDK
+# Darkmatter SDK [![test](https://github.com/vadimdemedes/darkmatter-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/vadimdemedes/darkmatter-sdk/actions/workflows/test.yml)
 
 > Enhance [Darkmatter](https://getdarkmatter.dev) integration with your [Astro](https://astro.build) website.
 
