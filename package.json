@@ -1,0 +1,45 @@
+{
+	"name": "darkmatter-sdk",
+	"version": "0.0.0",
+	"description": "Enhance Darkmatter integration with your Astro website",
+	"author": {
+		"name": "Vadim Demedes",
+		"email": "vadimdemedes@hey.com",
+		"url": "https://github.com/vadimdemedes"
+	},
+	"license": "ISC",
+	"type": "module",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"engines": {
+		"node": ">=14.16"
+	},
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build",
+		"dev": "tsc --watch",
+		"test": "xo && tsc"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"astro",
+		"darkmatter"
+	],
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^4.0.0",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"astro": "^2.10.7",
+		"prettier": "^2.8.8",
+		"typescript": "^5.1.6",
+		"xo": "^0.56.0"
+	},
+	"peerDependencies": {
+		"astro": "^2"
+	},
+	"prettier": "@vdemedes/prettier-config",
+	"xo": {
+		"prettier": true
+	}
+}
