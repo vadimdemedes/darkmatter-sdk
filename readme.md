@@ -53,3 +53,32 @@ export const collections = {posts};
 ```
 
 ![](media/date-time-field.png)
+
+### Configure a custom entry preview URL
+
+Darkmatter assumes that each entry's URL equals to content collection's name followed by an entry's slug. For example, when editing an entry in "posts" content collection, Darkmatter thinks the entry's URL is `/posts/[slug]`.
+
+However, that may not always be the case. Blog posts could live in a "posts" content collection, but they're actually displayed on a `/blog/[slug]` page. When you'll try to open an entry in the browser from Darkmatter, you'll see a 404 page.
+
+To work with that use case, you need to tell Darkmatter what is the right URL to open for each entry.
+
+```js
+import {z as zod, defineCollection} from 'astro:content';
+import {defineDarkmatterCollections} from 'darkmatter-sdk';
+
+const posts = defineCollection({
+  schema: zod.object({
+    title: zod.string()
+  });
+});
+
+export const collections = {posts};
+
+export const darkmatter = defineDarkmatterCollections({
+  posts: {
+    basePath: '/blog'
+  }
+});
+```
+
+Now Darkmatter will open the `/blog/[slug]` page, instead of `/posts/[slug]`.
