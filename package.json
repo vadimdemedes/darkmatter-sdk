@@ -7,6 +7,7 @@
 		"email": "vadimdemedes@hey.com",
 		"url": "https://github.com/vadimdemedes"
 	},
+	"repository": "vadimdemedes/darkmatter-sdk",
 	"license": "ISC",
 	"type": "module",
 	"exports": "./dist/index.js",
