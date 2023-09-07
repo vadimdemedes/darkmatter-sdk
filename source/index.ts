@@ -10,10 +10,10 @@ export function dateTime() {
 }
 
 export type Config = {
-	collections: Record<
+	collections?: Record<
 		string,
 		{
-			basePath: string;
+			basePath?: string;
 		}
 	>;
 };
