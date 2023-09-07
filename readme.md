@@ -62,9 +62,10 @@ However, that may not always be the case. Blog posts could live in a "posts" con
 
 To work with that use case, you need to tell Darkmatter what is the right URL to open for each entry.
 
+Let's take this example `src/content/config.js` file.
+
 ```js
 import {z as zod, defineCollection} from 'astro:content';
-import {defineDarkmatterCollections} from 'darkmatter-sdk';
 
 const posts = defineCollection({
   schema: zod.object({
@@ -73,11 +74,19 @@ const posts = defineCollection({
 });
 
 export const collections = {posts};
+```
 
-export const darkmatter = defineDarkmatterCollections({
-  posts: {
-    basePath: '/blog'
-  }
+To customize the entry preview URL, create a `darkmatter.config.js` file in the root project folder with this content:
+
+```js
+import {defineConfig} from 'darkmatter-sdk';
+
+export default defineConfig({
+	collections: {
+		posts: {
+			basePath: '/blog',
+		},
+	},
 });
 ```
 

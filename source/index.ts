@@ -9,12 +9,15 @@ export function dateTime() {
 	return zod.date();
 }
 
-type DarkmatterCollectionConfig = {
-	basePath: string;
+export type Config = {
+	collections: Record<
+		string,
+		{
+			basePath: string;
+		}
+	>;
 };
 
-export function defineDarkmatterCollections(
-	collections: Record<string, DarkmatterCollectionConfig>,
-) {
-	return collections;
+export function defineConfig(config: Config) {
+	return config;
 }
