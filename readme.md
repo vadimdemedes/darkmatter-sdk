@@ -1,11 +1,11 @@
-# Darkmatter SDK [![test](https://github.com/vadimdemedes/darkmatter-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/vadimdemedes/darkmatter-sdk/actions/workflows/test.yml)
+# Darkmatter SDK [![test](https://github.com/vadimdemedes/darkmatter/actions/workflows/test.yml/badge.svg)](https://github.com/vadimdemedes/darkmatter/actions/workflows/test.yml)
 
 > Enhance [Darkmatter](https://getdarkmatter.dev) integration with your [Astro](https://astro.build) website.
 
 ## Install
 
 ```sh
-npm install --save-dev darkmatter-sdk
+npm install --save-dev darkmatter
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Use `text()` to define a text field that shows a textarea instead of a single-li
 
 ```js
 import {z as zod, defineCollection} from 'astro:content';
-import {text} from 'darkmatter-sdk';
+import {text} from 'darkmatter';
 
 const posts = defineCollection({
   schema: zod.object({
@@ -40,7 +40,7 @@ Use `dateTime()` to define a date field that allows user to set the time, in add
 
 ```js
 import {z as zod, defineCollection} from 'astro:content';
-import {dateTime} from 'darkmatter-sdk';
+import {dateTime} from 'darkmatter';
 
 const posts = defineCollection({
   schema: zod.object({
@@ -79,7 +79,7 @@ export const collections = {posts};
 To customize the entry preview URL, create a `darkmatter.config.js` file in the root project folder with this content:
 
 ```js
-import {defineConfig} from 'darkmatter-sdk';
+import {defineConfig} from 'darkmatter';
 
 export default defineConfig({
 	collections: {

@@ -1,5 +1,5 @@
 {
-	"name": "darkmatter-sdk",
+	"name": "darkmatter",
 	"version": "1.0.0",
 	"description": "Enhance Darkmatter integration with your Astro website",
 	"author": {
