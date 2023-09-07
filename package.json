@@ -1,6 +1,6 @@
 {
 	"name": "darkmatter",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Enhance Darkmatter integration with your Astro website",
 	"author": {
 		"name": "Vadim Demedes",
