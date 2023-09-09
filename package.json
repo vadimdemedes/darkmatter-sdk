@@ -37,7 +37,7 @@
 		"xo": "^0.56.0"
 	},
 	"peerDependencies": {
-		"astro": "^2"
+		"astro": "^2 || ^3"
 	},
 	"prettier": "@vdemedes/prettier-config",
 	"xo": {
